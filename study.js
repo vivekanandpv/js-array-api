@@ -1,13 +1,19 @@
-//  Arrays follow the reference semantics
-//  that means, the variable holds the reference to the actual array in the memory
-//  Therefore, the copy of the variable is a copy of the reference, not the copy of the array
-
 const scores = [9, 8, 7, 7, 5, 4, 9, 0];
 
-const numbers = scores;
+//  push adds the element at the end
+scores.push(10);
 
-//  Now, numbers and scores are two references to the same array in the memory
+//  unshift adds the element at the beginning
+scores.unshift(67);
 
-numbers[0] = 899;
+//  splice to add at a random index
+scores.splice(3, 0, 34, 35, 36);
 
-console.log(scores[0]); //  899
+//  pop to remove at then end (returns the removed element)
+const e1 = scores.pop(); //  e1 = 10
+
+//  shift to remove from the beginning (returns the removed element)
+const e2 = scores.shift(); //  e2 = 67;
+
+//  splice to remove at the random index
+scores.splice(3, 2); //  removes 2 elements starting from 3rd index
