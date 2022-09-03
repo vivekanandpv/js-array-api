@@ -1,7 +1,21 @@
-const scores = [9, 8, 7, 7, 5, 4, 9, 0];
+const cities = [
+  {
+    city: 'Mumbai',
+    population: 12.44,
+  },
+  {
+    city: 'Delhi',
+    population: 11.0,
+  },
+  {
+    city: 'Bengaluru',
+    population: 8.42,
+  },
+  {
+    city: 'Hyderabad',
+    population: 6.8,
+  },
+];
 
-//  every returns true if all elements pass the predicate
-const er = scores.every((n) => n > 0); //  false
-
-//  some returns true if at least one element passes the predicate
-const sr = scores.some((n) => n > 0); //  true
+//  find returns the first element that passes the predicate
+const ac = cities.find((c) => c.population < 10); //  Bengaluru
